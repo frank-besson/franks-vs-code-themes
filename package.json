@@ -1,7 +1,7 @@
 {
-	"name": "franks-vs-code-themes",
-	"displayName": "Frank's VS Code Themes",
-	"description": "Personal VS Code color themes collection",
+	"name": "franks-vs-code",
+	"displayName": "Frank's VS Code",
+	"description": "Personal VS Code themes, settings, and editor setup",
 	"version": "0.1.0",
 	"engines": {
 		"vscode": "^1.20.0"

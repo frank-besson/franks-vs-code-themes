@@ -1,0 +1,22 @@
+{
+    "explorer.confirmDelete": false,
+    "git.confirmSync": false,
+    "git.ignoreRebaseWarning": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmPasteNative": false,
+    "extensions.ignoreRecommendations": true,
+    "go.toolsManagement.autoUpdate": true,
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "workbench.startupEditor": "none",
+    "workbench.layoutControl.enabled": false,
+    "workbench.navigationControl.enabled": false,
+    "workbench.activityBar.location": "top",
+    "workbench.colorTheme": "Frank's Tomorrow Midnight Minimal",
+    "editor.formatOnSave": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorBlinking": "smooth",
+    "window.zoomLevel": -0.5,
+    "window.commandCenter": false
+}

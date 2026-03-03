@@ -1,0 +1,6 @@
+aaron-bond.better-comments
+bradlc.vscode-tailwindcss
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+golang.go
+ms-python.python
