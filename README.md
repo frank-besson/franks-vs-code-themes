@@ -87,6 +87,37 @@ cp settings/settings.json ~/Library/Application\ Support/Antigravity/User/settin
 cat settings/extensions.txt | xargs -L 1 ~/.antigravity/antigravity/bin/antigravity --install-extension
 ```
 
+## Cursor
+
+[Cursor](https://cursor.com) is a VS Code fork with built-in AI. It uses its own extensions and config directory. Symlinks don't work — themes must be packaged as a VSIX.
+
+> **Note:** The `cursor` command in `$PATH` is the Cursor Agent CLI, not the IDE CLI. Use the full path to the binary inside the `.app` bundle.
+
+### Themes
+
+Temporarily fix the publisher field, package, install, then revert:
+
+```bash
+cd ~/Developer/franks-vs-code
+sed -i '' 's/"publisher": "Frank Besson"/"publisher": "frank-besson"/' package.json
+bunx @vscode/vsce package --allow-missing-repository --skip-license
+"/Applications/Cursor.app/Contents/Resources/app/bin/cursor" --install-extension franks-vs-code-0.1.0.vsix
+git checkout package.json
+rm franks-vs-code-0.1.0.vsix
+```
+
+### Settings
+
+```bash
+cp settings/settings.json ~/Library/Application\ Support/Cursor/User/settings.json
+```
+
+### Extensions
+
+```bash
+cat settings/extensions.txt | xargs -L 1 "/Applications/Cursor.app/Contents/Resources/app/bin/cursor" --install-extension
+```
+
 ## VSCodium
 
 [VSCodium](https://vscodium.com) is the open-source build of VS Code without Microsoft telemetry. It runs alongside VS Code as a separate app with its own config at `~/.vscode-oss/`.
