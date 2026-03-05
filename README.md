@@ -60,6 +60,33 @@ cat settings/extensions.txt | xargs -L 1 code --install-extension
 cat settings/extensions.txt | xargs -L 1 codium --install-extension
 ```
 
+## Antigravity
+
+[Antigravity](https://antigravity.app) is a VS Code fork by Google. It uses its own extensions and config directory.
+
+### Themes
+
+Package and install as a VSIX:
+
+```bash
+cd ~/Developer/franks-vs-code
+bunx @vscode/vsce package --allow-missing-repository --skip-license
+~/.antigravity/antigravity/bin/antigravity --install-extension franks-vs-code-0.1.0.vsix
+rm franks-vs-code-0.1.0.vsix
+```
+
+### Settings
+
+```bash
+cp settings/settings.json ~/Library/Application\ Support/Antigravity/User/settings.json
+```
+
+### Extensions
+
+```bash
+cat settings/extensions.txt | xargs -L 1 ~/.antigravity/antigravity/bin/antigravity --install-extension
+```
+
 ## VSCodium
 
 [VSCodium](https://vscodium.com) is the open-source build of VS Code without Microsoft telemetry. It runs alongside VS Code as a separate app with its own config at `~/.vscode-oss/`.
